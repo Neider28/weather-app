@@ -1,0 +1,8 @@
+<article class="daily-item">
+  <h3>{{weatherDay.date | date:'EEE, d MMM'}}</h3>
+  <img [src]="weatherDay.icon" alt="icon" width="50px" height="50px">
+  <div>
+    <p>{{weatherDay.maxTemp | decimal}}°C</p>
+    <p>{{weatherDay.minTemp | decimal}}°C</p>
+  </div>
+</article>

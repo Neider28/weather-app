@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@geoapify/geocoder-autocomplete/styles/round-borders.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b77b5224-5d04-48df-8d5b-04c84de5025a"
   }
 }

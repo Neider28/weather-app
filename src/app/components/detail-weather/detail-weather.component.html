@@ -1,0 +1,174 @@
+<section class="detail-container">
+  <div class="daily-container" *ngIf="!isLoading">
+    <app-daily-item *ngFor="let item of weatherDetail.days" [weatherDay]="item"></app-daily-item>
+  </div>
+  <div class="daily-container" *ngIf="isLoading">
+    <ngx-skeleton-loader
+      count="1"
+      appearance="line"
+      animation="pulse"
+      [theme]="{
+        'width': '100%',
+        'height': '135px',
+        'margin': '0px',
+        'border-radius': '0px',
+        'background': '#1E213A'
+      }"
+      *ngFor="let loading of loadings"
+    >
+    </ngx-skeleton-loader>
+  </div>
+  <div class="hightlights-container">
+    <h2>Today’s Hightlights</h2>
+    <div class="hightlights-content">
+      <article class="hightlight-item">
+        <h3 *ngIf="!isLoading">Wind status</h3>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '20px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <h2 *ngIf="!isLoading">{{weatherDetail.windStatus}} <span>mph</span></h2>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '57px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <p *ngIf="!isLoading">{{weatherDetail.windDir | direction}}</p>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '16px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </article>
+      <article class="hightlight-item">
+        <h3 *ngIf="!isLoading">Humidity</h3>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '20px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <h2 *ngIf="!isLoading">{{weatherDetail.humidity}}<span>%</span></h2>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '57px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <progress max="100" [value]="weatherDetail.humidity" *ngIf="!isLoading"></progress>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '16px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </article>
+      <article class="hightlight-item">
+        <h3 *ngIf="!isLoading">Visibility</h3>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '20px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <h2 *ngIf="!isLoading">{{weatherDetail.visibility}} <span>miles</span></h2>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '55px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </article>
+      <article class="hightlight-item">
+        <h3 *ngIf="!isLoading">Air Pressure</h3>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '20px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+        <h2 *ngIf="!isLoading">{{weatherDetail.airPressure}} <span>mb</span></h2>
+        <ngx-skeleton-loader
+          *ngIf="isLoading"
+          count="1"
+          appearance="line"
+          animation="pulse"
+          [theme]="{
+            'width': '100px',
+            'height': '55px',
+            'border-radius': '0px',
+            'background': '#6E707A'
+          }"
+        >
+        </ngx-skeleton-loader>
+      </article>
+    </div>
+  </div>
+</section>

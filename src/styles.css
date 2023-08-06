@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  /* Colors */
+  --blue-light: #1E213A;
+  --blue-dark: #100E1D;
+  --gray-1: #6E707A;
+  --gray-2: #A09FB1;
+  --gray-3: #88869D;
+  --gray-4: #616475;
+  --white: #E7E7EB;
+  --yellow: #FFEC65;
+
+  /* Box shadow */
+  --box-shadow-1: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.geoapify-autocomplete-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  color: var(--gray-4);
+  font-family: Raleway;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.geoapify-close-button.visible {
+  color: var(--white);
+}
+
+.geoapify-autocomplete-items {
+  width: 270px;
+  position: absolute;
+  top: 70px;
+  left: -37px;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: none;
+  z-index: 99;
+}
+
+.geoapify-autocomplete-items div {
+  color: var(--white);
+  font-family: Raleway;
+  border: 1px solid transparent;
+}
+
+.geoapify-autocomplete-items div:hover {
+  background-color: transparent;
+  border: 1px solid var(--gray-4);
+}
+
+.geoapify-autocomplete-item .icon {
+  display: none;
+}
+
+.geoapify-autocomplete-item .address {
+  display: flex;
+  flex-direction: column;
+}
+
+.geoapify-autocomplete-item .main-part {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.geoapify-autocomplete-items .secondary-part {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-left: 0px;
+}

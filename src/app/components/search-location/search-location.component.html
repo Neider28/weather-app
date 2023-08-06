@@ -1,0 +1,18 @@
+<div class="search-location-container">
+  <div class="search-close">
+    <button type="button" (click)="handleSearch()">
+      <img src="../../../assets/close.png" alt="close" width="20px">
+    </button>
+  </div>
+  <nav class="search-nav">
+    <div>
+      <img src="../../../assets/search.png" alt="search" width="20px">
+      <geoapify-geocoder-autocomplete
+        placeholder="London, UK"
+        [value]="displayValue"
+        (placeSelect)="placeSelected($event)"
+      >
+      </geoapify-geocoder-autocomplete>
+    </div>
+  </nav>
+</div>
