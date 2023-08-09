@@ -43,8 +43,7 @@
 
 .current-weather-container {
   width: 100%;
-  height: auto;
-  margin-top: 15px;
+  height: calc(100vh - 76px);
   padding: 0px 11px;
   display: flex;
   flex-direction: column;
